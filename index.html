@@ -1,0 +1,573 @@
+```html
+<!DOCTYPE html>
+<html lang="tr" translate="no">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- Sayfanın otomatik çevrilmesini engelle -->
+    <meta
+        name="google"
+        content="notranslate"
+    >
+
+    <meta
+        http-equiv="Content-Language"
+        content="tr"
+    >
+
+    <title>Idevo - Fikirlerini Paylaş</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     HEADER
+     ========================================== -->
+
+<header class="header">
+
+
+    <div class="logo">
+
+
+        <div class="logo-icon">
+            I
+        </div>
+
+
+        <div class="logo-text">
+
+            <h1>
+                Idevo
+            </h1>
+
+            <p>
+                Fikirlerini paylaş
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="header-right">
+
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Fikirlerde ara..."
+            autocomplete="off"
+        >
+
+
+        <button
+            id="newIdeaBtn"
+            type="button"
+        >
+            + Yeni Fikir
+        </button>
+
+
+    </div>
+
+
+</header>
+
+
+
+<!-- ==========================================
+     MAIN
+     ========================================== -->
+
+<main class="container">
+
+
+
+    <!-- ======================================
+         WELCOME
+         ====================================== -->
+
+    <section class="welcome">
+
+
+        <div class="welcome-content">
+
+
+            <span class="small-title">
+
+                IDEVO'YA HOŞ GELDİN
+
+            </span>
+
+
+            <h2>
+
+                Fikirler<br>
+                birlikte gelişir.
+
+            </h2>
+
+
+            <p>
+
+                Yeni fikirleri keşfet,
+                düşüncelerini paylaş
+                ve topluluğun fikirlerine katıl.
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ======================================
+         NAVIGATION
+         ====================================== -->
+
+    <div class="navigation">
+
+
+        <div class="nav-left">
+
+
+            <button
+                class="nav-button active"
+                data-page="discover"
+                type="button"
+            >
+                Keşfet
+            </button>
+
+
+            <button
+                class="nav-button"
+                data-page="popular"
+                type="button"
+            >
+                Popüler
+            </button>
+
+
+            <button
+                class="nav-button"
+                data-page="latest"
+                type="button"
+            >
+                En Yeniler
+            </button>
+
+
+            <button
+                class="nav-button"
+                data-page="saved"
+                type="button"
+            >
+                Kaydedilenler
+            </button>
+
+
+        </div>
+
+
+
+        <!-- KATEGORİ -->
+
+        <div class="filter">
+
+
+            <select
+                id="categoryFilter"
+            >
+
+                <option value="all">
+                    Tüm kategoriler
+                </option>
+
+
+                <option value="Teknoloji">
+                    Teknoloji
+                </option>
+
+
+                <option value="Eğitim">
+                    Eğitim
+                </option>
+
+
+                <option value="Oyun">
+                    Oyun
+                </option>
+
+
+                <option value="Sosyal">
+                    Sosyal
+                </option>
+
+
+                <option value="Tasarım">
+                    Tasarım
+                </option>
+
+
+                <option value="Günlük Yaşam">
+                    Günlük Yaşam
+                </option>
+
+
+                <option value="Eğlence">
+                    Eğlence
+                </option>
+
+
+            </select>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ======================================
+         FİKİRLER
+         ====================================== -->
+
+    <section id="ideasArea">
+
+
+        <div class="section-title">
+
+
+            <div>
+
+
+                <h3 id="sectionTitle">
+
+                    Fikirleri keşfet
+
+                </h3>
+
+
+                <p id="sectionDescription">
+
+                    Idevo topluluğunun
+                    yeni fikirlerini keşfet.
+
+                </p>
+
+
+            </div>
+
+
+            <span id="pageInfo"></span>
+
+
+        </div>
+
+
+
+        <!-- FİKİR KARTLARI -->
+
+        <div
+            id="ideas"
+            class="ideas"
+        ></div>
+
+
+
+        <!-- SAYFALAMA -->
+
+        <div
+            id="pagination"
+            class="pagination"
+        ></div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ==========================================
+     YENİ FİKİR MODALI
+     ========================================== -->
+
+<div
+    id="newIdeaModal"
+    class="modal"
+>
+
+
+    <div class="modal-content">
+
+
+        <button
+            class="close"
+            id="closeNewIdea"
+            type="button"
+            aria-label="Kapat"
+        >
+
+            ×
+
+        </button>
+
+
+
+        <span class="small-title">
+
+            FİKRİNİ PAYLAŞ
+
+        </span>
+
+
+
+        <h2>
+
+            Aklındaki fikir ne?
+
+        </h2>
+
+
+
+        <!-- BAŞLIK -->
+
+        <label for="ideaTitle">
+
+            Başlık
+
+        </label>
+
+
+        <input
+            id="ideaTitle"
+            type="text"
+            placeholder="Fikrine bir başlık ver"
+            maxlength="80"
+            autocomplete="off"
+        >
+
+
+
+        <!-- KATEGORİ -->
+
+        <label for="ideaCategory">
+
+            Kategori
+
+        </label>
+
+
+        <select
+            id="ideaCategory"
+        >
+
+            <option value="Teknoloji">
+                Teknoloji
+            </option>
+
+
+            <option value="Eğitim">
+                Eğitim
+            </option>
+
+
+            <option value="Oyun">
+                Oyun
+            </option>
+
+
+            <option value="Sosyal">
+                Sosyal
+            </option>
+
+
+            <option value="Tasarım">
+                Tasarım
+            </option>
+
+
+            <option value="Günlük Yaşam">
+                Günlük Yaşam
+            </option>
+
+
+            <option value="Eğlence">
+                Eğlence
+            </option>
+
+
+        </select>
+
+
+
+        <!-- AÇIKLAMA -->
+
+        <label for="ideaDescription">
+
+            Açıklama
+
+        </label>
+
+
+        <textarea
+            id="ideaDescription"
+            placeholder="Fikrini anlat..."
+            maxlength="500"
+        ></textarea>
+
+
+
+        <!-- PAYLAŞ -->
+
+        <button
+            id="publishBtn"
+            class="publish"
+            type="button"
+        >
+
+            Fikri Paylaş
+
+        </button>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ==========================================
+     FİKİR DETAY MODALI
+     ========================================== -->
+
+<div
+    id="detailModal"
+    class="modal"
+>
+
+
+    <div class="modal-content detail">
+
+
+        <button
+            class="close"
+            id="closeDetail"
+            type="button"
+            aria-label="Kapat"
+        >
+
+            ×
+
+        </button>
+
+
+
+        <!-- FİKİR DETAYI -->
+
+        <div id="detail"></div>
+
+
+
+        <!-- YORUMLAR -->
+
+        <div class="comments-title">
+
+
+            <h3>
+
+                Yorumlar
+
+            </h3>
+
+
+            <span id="commentNumber">
+
+                0
+
+            </span>
+
+
+        </div>
+
+
+
+        <!-- YORUM LİSTESİ -->
+
+        <div
+            id="comments"
+        ></div>
+
+
+
+        <!-- YORUM YAZ -->
+
+        <div class="comment-box">
+
+
+            <input
+                id="commentInput"
+                type="text"
+                placeholder="Yorumunu yaz..."
+                maxlength="250"
+                autocomplete="off"
+            >
+
+
+            <button
+                id="commentBtn"
+                type="button"
+            >
+
+                Gönder
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ==========================================
+     JAVASCRIPT
+     ========================================== -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
+```
