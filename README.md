@@ -31,6 +31,10 @@ This project practices JavaScript logic, conditional thinking, DOM manipulation,
 - Add difficulty levels
 - Add progress persistence
 
+## Challenge Design
+
+Logic challenges should provide immediate feedback and keep the question, choices, and result easy to understand on smaller screens.
+
 ## License
 
 This project is open source and available for personal and educational use.
