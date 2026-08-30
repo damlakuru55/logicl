@@ -1,25 +1,40 @@
 # Logicl
 
-Logicl is a simple web application focused on logic-based interactions and problem solving.
+Logicl is a lightweight web application focused on logic-based interactions and problem solving.
 
 ## Features
 
-* Interactive logic activities
-* Simple user interface
-* Responsive design
-* Easy navigation
-* Lightweight frontend
+- Interactive logic activities
+- Simple interface
+- Responsive layout
+- Lightweight frontend
+- Browser-based interaction
 
 ## Technologies
 
-* HTML5
-* CSS3
-* JavaScript
+- HTML5
+- CSS3
+- JavaScript
 
-## Purpose
+## Getting Started
 
-This project was created to practice JavaScript logic, DOM manipulation, and interactive web development.
+Open `index.html` in a modern browser to start the application.
+
+## Learning Goals
+
+This project practices JavaScript logic, conditional thinking, DOM manipulation, and interactive UI development.
+
+## Future Improvements
+
+- Add more logic challenges
+- Add score tracking
+- Add difficulty levels
+- Add progress persistence
 
 ## License
 
-This project is open source and available under the MIT License.
+This project is open source and available for personal and educational use.
+
+## Copyright
+
+© 2026 Damla Kuru. All rights reserved.
