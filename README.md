@@ -20,9 +20,13 @@ Logic challenges should keep the question, choices, and result easy to understan
 
 Answers should be checked consistently and invalid or incomplete selections should receive clear feedback instead of being treated as correct or incorrect by accident.
 
+## Scoring Model
+
+Future scoring can assign points only after a valid answer is selected. The visible score should stay synchronized with the underlying challenge state.
+
 ## Learning Goals
 
-This project practices JavaScript logic, conditional thinking, DOM manipulation, validation, and interactive UI development.
+This project practices JavaScript logic, conditional thinking, DOM manipulation, validation, scoring, and interactive UI development.
 
 ## Accessibility
 
