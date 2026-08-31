@@ -10,18 +10,23 @@ Logicl is a lightweight web application focused on logic-based interactions and 
 - Responsive layout
 - Lightweight frontend
 - Browser-based interaction
+- Clear progress states
 
 ## Challenge Design
 
 Logic challenges should keep the question, choices, and result easy to understand. Feedback should clearly distinguish correct and incorrect answers without interrupting the flow of the activity.
 
+## Answer Handling
+
+Answers should be checked consistently and invalid or incomplete selections should receive clear feedback instead of being treated as correct or incorrect by accident.
+
 ## Learning Goals
 
 This project practices JavaScript logic, conditional thinking, DOM manipulation, validation, and interactive UI development.
 
-## Progress States
+## Accessibility
 
-The activity can be organized around a clear question state, an answered state, and a completed state. Keeping these states explicit makes progress feedback easier to understand and gives future scoring features a predictable foundation.
+Choices and answer controls should have descriptive labels, visible focus states, and keyboard support.
 
 ## Future Improvements
 
