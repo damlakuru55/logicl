@@ -57,3 +57,8 @@ Open `index.html` in a modern browser to start the application.
 ## License
 
 This project is open source and available for personal and educational use.
+
+
+## Development Notes
+
+Logic interactions should present validation feedback close to the relevant control and keep the current result visible after each action.
