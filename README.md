@@ -24,13 +24,17 @@ Answers should be checked consistently and invalid or incomplete selections shou
 
 Future scoring can assign points only after a valid answer is selected. The visible score should stay synchronized with the underlying challenge state.
 
-## Learning Goals
-
-This project practices JavaScript logic, conditional thinking, DOM manipulation, validation, scoring, and interactive UI development.
-
 ## Accessibility
 
 Choices and answer controls should have descriptive labels, visible focus states, and keyboard support.
+
+## Feedback Timing
+
+Answer feedback should appear immediately after a valid selection and remain understandable until the next challenge begins. Invalid selections should not alter the score.
+
+## Learning Goals
+
+This project practices JavaScript logic, conditional thinking, DOM manipulation, validation, scoring, and interactive UI development.
 
 ## Future Improvements
 
