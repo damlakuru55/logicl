@@ -1,0 +1,19 @@
+name: Code Quality
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  syntax-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check JavaScript syntax
+        shell: bash
+        run: |
+          files=$(find . -type f -name '*.js' -not -path './.git/*')
+          if [ -n "$files" ]; then while IFS= read -r file; do node --check "$file"; done <<< "$files"; else echo 'No JavaScript files found.'; fi
