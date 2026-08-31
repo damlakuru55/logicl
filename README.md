@@ -58,7 +58,6 @@ Open `index.html` in a modern browser to start the application.
 
 This project is open source and available for personal and educational use.
 
-
 ## Development Notes
 
 Logic interactions should present validation feedback close to the relevant control and keep the current result visible after each action.
@@ -66,3 +65,7 @@ Logic interactions should present validation feedback close to the relevant cont
 ## Release Check
 
 Challenge feedback and score state should remain synchronized after every valid answer.
+
+## Final Review
+
+The logic challenge flow is documented to keep answer validation and score state predictable.
