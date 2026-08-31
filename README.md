@@ -19,6 +19,10 @@ Logic challenges should keep the question, choices, and result easy to understan
 
 This project practices JavaScript logic, conditional thinking, DOM manipulation, validation, and interactive UI development.
 
+## Progress States
+
+The activity can be organized around a clear question state, an answered state, and a completed state. Keeping these states explicit makes progress feedback easier to understand and gives future scoring features a predictable foundation.
+
 ## Future Improvements
 
 - Add more logic challenges
